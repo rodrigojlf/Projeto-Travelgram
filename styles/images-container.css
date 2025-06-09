@@ -1,0 +1,30 @@
+#images-container {
+    --img-container-padding: 1rem;
+    --img-container-gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--img-container-gap);
+    padding-block: var(--img-container-padding);
+    justify-content: center;
+    
+    & img {
+        --img-size: 20.5rem;
+
+        width: 100%;
+        height: 100%;
+        max-width: var(--img-size);
+        max-height: var(--img-size);
+    }
+}
+
+@media (width >= 45em) {
+    #images-container {
+        --img-container-padding: 1.5rem;
+        --img-container-gap: 1.5rem;
+
+        & img {
+            --img-size: 17.875rem;
+        }
+    }
+}
