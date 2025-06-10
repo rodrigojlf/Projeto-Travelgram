@@ -1,11 +1,33 @@
 footer {
     display: flex;
-    gap: 24px;
-    padding-block: 24px;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
     font: var(--text-sm);
+
+    & span:nth-child(1) {
+        text-align: center;
+        /* margin-right: auto; */
+    }
+
+    & div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }
 
-footer span:nth-child(1) {
-    margin-right: auto;
+@media(width >= 45em) {
+    footer {
+        padding-block: 1.5rem;
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        & span:nth-child(1) {
+            margin-right: auto;
+        }
+    }
 }
